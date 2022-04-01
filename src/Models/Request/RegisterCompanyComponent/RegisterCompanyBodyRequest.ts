@@ -1,4 +1,4 @@
-export default class RegisterBodyRequest {
+export default class RegisterCompanyBodyRequest {
     public name: string;
     public description: string;
 
