@@ -6,7 +6,6 @@ export function CompanyStaticsWebService(token: any, uuid: string): Promise<any>
         .then((response) => {
             return response;
         }).catch((error) => {
-            console.log(error);
             return error;
         });
     return response;
