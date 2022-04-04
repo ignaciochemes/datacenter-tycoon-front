@@ -1,4 +1,4 @@
-import { Button, Container, Grid, TextField } from "@mui/material";
+import { Button, Container, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import DatacenterComponent from "../Components/DashboardComponents/DatacenterComponent";
@@ -45,37 +45,35 @@ export default function DashBoardComponent() {
         <div>
             <NavBar loggedIn={loggedIn} />
             {loggedIn ? (
-                <div>
-                    <Container maxWidth="md">
-                        <Grid container
-                            spacing={1}
-                            direction="column"
-                            justifyContent={"center"}
-                            alignItems={'center'}
-                            style={{ marginTop: '5%' }}
-                        >
-                            <UserStaticsComponent />
-                        </Grid>
-                        <Grid container
-                            spacing={1}
-                            direction="column"
-                            justifyContent={"center"}
-                            alignItems={'center'}
-                            style={{ marginTop: '5%' }}
-                        >
-                            <DatacenterComponent />
-                        </Grid>
-                        <Grid container
-                            spacing={1}
-                            direction="column"
-                            justifyContent={"center"}
-                            alignItems={'center'}
-                            style={{ marginTop: '5%' }}
-                        >
-                            <RackComponent />
-                        </Grid>
-                    </Container>
-                </div>
+                <Container maxWidth="md">
+                    <Grid container
+                        spacing={1}
+                        direction="column"
+                        justifyContent={"center"}
+                        alignItems={'center'}
+                        style={{ marginTop: '5%' }}
+                    >
+                        <UserStaticsComponent />
+                    </Grid>
+                    <Grid container
+                        spacing={1}
+                        direction="column"
+                        justifyContent={"center"}
+                        alignItems={'center'}
+                        style={{ marginTop: '5%' }}
+                    >
+                        <DatacenterComponent />
+                    </Grid>
+                    <Grid container
+                        spacing={1}
+                        direction="column"
+                        justifyContent={"center"}
+                        alignItems={'center'}
+                        style={{ marginTop: '5%' }}
+                    >
+                        <RackComponent />
+                    </Grid>
+                </Container>
             ) : (
                 <div>
                     <Container maxWidth="md">
