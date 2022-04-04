@@ -2,6 +2,7 @@ import { RouteObject } from "react-router-dom";
 import DashBoardComponent from "../MainComponents/DashboardComponent";
 import { RegisterCompanyComponent } from "../MainComponents/RegisterCompanyComponent";
 import RegisterComponent from "../MainComponents/RegisterComponent";
+import { RegisterDatacenterComponent } from "../MainComponents/RegisterDatacenterComponent";
 import ShopComponent from "../MainComponents/ShopComponent";
 import RoutesConstants from "./RoutesConstants";
 
@@ -21,5 +22,9 @@ export const RoutesHandler: RouteObject[] = [
     {
         path: RoutesConstants.REGISTER_COMPANY_ROUTE,
         element: <RegisterCompanyComponent />
+    },
+    {
+        path: RoutesConstants.REGISTER_DATACENTER_ROUTE,
+        element: <RegisterDatacenterComponent />
     }
 ]

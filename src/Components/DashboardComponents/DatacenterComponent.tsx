@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { DatacenterWebService } from "../../WebServices/DatacenterWebService";
 
@@ -30,7 +30,7 @@ export default function DatacenterComponent() {
                             Name: {datacenter.name}
                         </Typography>
                         <Typography variant="body2" component="div">
-                            Name: {datacenter.description}
+                            Description: {datacenter.description}
                         </Typography>
                         <Typography variant="body2" component="div">
                             Type: {datacenter.datacenterType}
@@ -72,9 +72,17 @@ export default function DatacenterComponent() {
                     </Grid>
                 </Grid>
             ) : (
-                <Typography variant="h5" component="h2">
-                    No datacenter
-                </Typography>
+                <Box
+                    alignContent={'center'}
+                    justifyContent={'center'}
+                    display={'flex'}
+                    flexDirection={'column'}
+                    marginTop={'10%'}
+                >
+                    <Button variant="contained" href="/register-datacenter">
+                        Open Datacenter
+                    </Button>
+                </Box>
             )}
         </div>
     )
