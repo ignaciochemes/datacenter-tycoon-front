@@ -12,7 +12,6 @@ export function RegisterComponent() {
     const sendToBackend = async () => {
         const body = new RegisterDatacenterBodyRequest(datacenterName, datacenterDescription, 1);
         const response2 = await CreateDataCenterWebService(body, localStorage.getItem('token'));
-        console.log(response2);
     }
 
     return (

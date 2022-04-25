@@ -1,4 +1,5 @@
 import { RouteObject } from "react-router-dom";
+import AccountComponent from "../MainComponents/AccountComponent";
 import DashBoardComponent from "../MainComponents/DashboardComponent";
 import { RegisterCompanyComponent } from "../MainComponents/RegisterCompanyComponent";
 import RegisterComponent from "../MainComponents/RegisterComponent";
@@ -26,5 +27,9 @@ export const RoutesHandler: RouteObject[] = [
     {
         path: RoutesConstants.REGISTER_DATACENTER_ROUTE,
         element: <RegisterDatacenterComponent />
+    },
+    {
+        path: RoutesConstants.ACCOUNT_ROUTE,
+        element: <AccountComponent />
     }
 ]
