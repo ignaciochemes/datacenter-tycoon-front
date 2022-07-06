@@ -65,7 +65,7 @@ export default function ShopComponent() {
 
     return (
         <div>
-            <NavBar loggedIn={loggedIn} />
+            <NavBar />
             {loggedIn ? (
                 <Container maxWidth="md">
                     <Grid>

@@ -4,7 +4,7 @@ import NavBar from "../Components/NavbarComponent";
 export function RegisterCompanyComponent(loggedIn: any) {
     return (
         <div>
-            <NavBar loggedIn={loggedIn} />
+            <NavBar />
             <CreateCompanyComponent />
         </div>
     )

@@ -5,6 +5,7 @@ import DatacenterComponent from "../Components/DashboardComponents/DatacenterCom
 import RackComponent from "../Components/DashboardComponents/RackComponent";
 import UserStaticsComponent from "../Components/DashboardComponents/UserStaticsComponent";
 import NavBar from "../Components/NavbarComponent";
+import ResponsiveDrawer from "../Components/NavbarComponent2";
 import { LoginBodyRequest } from "../Models/Request/LoginComponent/LoginBodyRequest";
 import { JwtWebService } from "../WebServices/JwtWebService";
 import { LoginWebService } from "../WebServices/LoginWebService";
@@ -43,39 +44,43 @@ export default function DashBoardComponent() {
 
     return (
         <div>
-            <NavBar loggedIn={loggedIn} />
+            {/* <NavBar loggedIn={loggedIn} /> */}
             {loggedIn ? (
-                <Container maxWidth="md">
-                    <Grid container
-                        spacing={1}
-                        direction="column"
-                        justifyContent={"center"}
-                        alignItems={'center'}
-                        style={{ marginTop: '5%' }}
-                    >
-                        <UserStaticsComponent />
-                    </Grid>
-                    <Grid container
-                        spacing={1}
-                        direction="column"
-                        justifyContent={"center"}
-                        alignItems={'center'}
-                        style={{ marginTop: '5%' }}
-                    >
-                        <DatacenterComponent />
-                    </Grid>
-                    <Grid container
-                        spacing={1}
-                        direction="column"
-                        justifyContent={"center"}
-                        alignItems={'center'}
-                        style={{ marginTop: '5%' }}
-                    >
-                        <RackComponent />
-                    </Grid>
-                </Container>
+                <div>
+                    <ResponsiveDrawer />
+                    <Container maxWidth="md">
+                        <Grid container
+                            spacing={1}
+                            direction="column"
+                            justifyContent={"center"}
+                            alignItems={'center'}
+                            style={{ marginTop: '5%' }}
+                        >
+                            <UserStaticsComponent />
+                        </Grid>
+                        <Grid container
+                            spacing={1}
+                            direction="column"
+                            justifyContent={"center"}
+                            alignItems={'center'}
+                            style={{ marginTop: '5%' }}
+                        >
+                            <DatacenterComponent />
+                        </Grid>
+                        <Grid container
+                            spacing={1}
+                            direction="column"
+                            justifyContent={"center"}
+                            alignItems={'center'}
+                            style={{ marginTop: '5%' }}
+                        >
+                            <RackComponent />
+                        </Grid>
+                    </Container>
+                </div>
             ) : (
                 <div>
+                    <NavBar />
                     <Container maxWidth="md">
                         <Grid container
                             spacing={1}

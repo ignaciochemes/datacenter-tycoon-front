@@ -42,7 +42,7 @@ export default function RegisterFormComponent() {
 
     return (
         <div>
-            <NavBar loggedIn />
+            <NavBar />
             <Container maxWidth="md">
                 <Grid container
                     spacing={1}

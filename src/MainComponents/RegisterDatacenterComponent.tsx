@@ -4,7 +4,7 @@ import { RegisterComponent } from '../Components/DatacenterComponents/RegisterCo
 export function RegisterDatacenterComponent(loggedIn: any) {
     return (
         <div>
-            <NavBar loggedIn={loggedIn} />
+            <NavBar />
             <RegisterComponent />
         </div>
     )
