@@ -29,6 +29,9 @@ export default function UserStaticsComponent() {
 
     return (
         <div>
+            <Typography variant="body2" component="div">
+                <h1>User Information</h1>
+            </Typography>
             {userStatics[0]?.uuid ? (
                 <Grid container spacing={3}>
                     {userStatics.map((userStatics: any) => (

@@ -22,7 +22,9 @@ export default function DatacenterComponent() {
 
     return (
         <div>
-            <Typography variant="h4">Datacenter information</Typography>
+            <Typography variant="body2" component="div">
+                <h1>Datacenter Information</h1>
+            </Typography>
             {hasDatacenter ? (
                 <Grid container spacing={3}>
                     <Grid item xs={10} sm={6}>
